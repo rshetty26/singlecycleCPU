@@ -1,7 +1,7 @@
 <h1>Single Cycle CPU Project</h1>
 
 <h2>Abstract</h2>
-&emsp In this project I have designed and implemented a Single cycle CPU. This CPU takes R-type, I-type, and J-type instructions and then implements them using two memory modules, a program counter, an ALU, and a control unit. This project was created in Vivado using the xc7s100fgga676-1 device. 
+    In this project I have designed and implemented a Single cycle CPU. This CPU takes R-type, I-type, and J-type instructions and then implements them using two memory modules, a program counter, an ALU, and a control unit. This project was created in Vivado using the xc7s100fgga676-1 device. 
 <br/><br/>
 <h2>Introduction</h2>
 &emspThis CPU works by executing a R-type, I-type or J-type instruction every clock cycle. It has three main modules: The instruction memory (sc_inst_mem), the data memory (scdatamem), and the CPU (sc_cpu). Within the CPU, the Control Unit looks at the opcode and function received from the PC. Then it uses the ALU for different operations based on the address. The Program Counter handles sending address to the instruction memory, control unit and ALU. 
