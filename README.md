@@ -13,13 +13,19 @@ Every clock cycle starts with fetching the instruction from PC. It then reads th
 Some advantages of implementing the single cycle CPU are that it is easier to design and requires less complex hardware. However, they have long, inefficient clock cycles since they are single cycle.
 <br/><br/>
 <h2>Schematics</h2>
-<img src="https://i.imgur.com/FoYbKb7.png"/>
+<img src="https://i.imgur.com/TFCeeEN.png"/>
 <br/>
-<img src="https://i.imgur.com/0tXOO5d.png"/>
+<img src="https://i.imgur.com/9Wj4I1j.png"/>
 <br/>
-<img src="https://i.imgur.com/0ovQUQb.png"/>
+<img src="https://i.imgur.com/gcsN4bg.png"/>
 <br/>
-<img src="https://i.imgur.com/na6TrdY.png"/>
-
+<img src="https://i.imgur.com/IBM0GZE.png"/>
+<br/>
+<img src="https://i.imgur.com/HdG1zwL.png"/>
+<br/>
+<img src="https://i.imgur.com/F8sUucM.png"/>
+<br/>
+<img src="https://i.imgur.com/NHTC2Eu.png"/>
+<br/>
 
 
