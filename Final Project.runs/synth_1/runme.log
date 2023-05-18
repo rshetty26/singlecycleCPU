@@ -1,0 +1,446 @@
+
+*** Running vivado
+    with args -log single_cycle_computer.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source single_cycle_computer.tcl
+
+
+
+****** Vivado v2022.2 (64-bit)
+  **** SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+  **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source single_cycle_computer.tcl -notrace
+create_project: Time (s): cpu = 00:00:04 ; elapsed = 00:00:09 . Memory (MB): peak = 384.227 ; gain = 40.574
+Command: read_checkpoint -auto_incremental -incremental {C:/Users/rithv/Documents/CMPEN 331/Final Project/Final Project.srcs/utils_1/imports/synth_1/single_cycle_computer_tb.dcp}
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/rithv/Documents/CMPEN 331/Final Project/Final Project.srcs/utils_1/imports/synth_1/single_cycle_computer_tb.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top single_cycle_computer -part xc7s100fgga676-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7s100'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7s100'
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 10928
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:12 . Memory (MB): peak = 827.332 ; gain = 410.734
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'single_cycle_computer' [C:/Users/rithv/Documents/CMPEN 331/Final Project/Final Project.srcs/sources_1/new/single_cycle_computer.v:23]
+INFO: [Synth 8-6157] synthesizing module 'sc_inst_mem' [C:/Users/rithv/Documents/CMPEN 331/Final Project/Final Project.srcs/sources_1/new/sc_inst_mem.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'sc_inst_mem' (0#1) [C:/Users/rithv/Documents/CMPEN 331/Final Project/Final Project.srcs/sources_1/new/sc_inst_mem.v:23]
+INFO: [Synth 8-6157] synthesizing module 'scdatamem' [C:/Users/rithv/Documents/CMPEN 331/Final Project/Final Project.srcs/sources_1/new/sc_datamem.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'scdatamem' (0#1) [C:/Users/rithv/Documents/CMPEN 331/Final Project/Final Project.srcs/sources_1/new/sc_datamem.v:23]
+INFO: [Synth 8-6157] synthesizing module 'sc_cpu' [C:/Users/rithv/Documents/CMPEN 331/Final Project/Final Project.srcs/sources_1/new/sc_cpu.v:23]
+INFO: [Synth 8-6157] synthesizing module 'PC' [C:/Users/rithv/Documents/CMPEN 331/Final Project/Final Project.srcs/sources_1/new/PC.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'PC' (0#1) [C:/Users/rithv/Documents/CMPEN 331/Final Project/Final Project.srcs/sources_1/new/PC.v:23]
+INFO: [Synth 8-6157] synthesizing module 'PC_Adder' [C:/Users/rithv/Documents/CMPEN 331/Final Project/Final Project.srcs/sources_1/new/PC_Adder.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'PC_Adder' (0#1) [C:/Users/rithv/Documents/CMPEN 331/Final Project/Final Project.srcs/sources_1/new/PC_Adder.v:23]
+INFO: [Synth 8-6157] synthesizing module 'control_unit' [C:/Users/rithv/Documents/CMPEN 331/Final Project/Final Project.srcs/sources_1/new/control_unit.v:23]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/rithv/Documents/CMPEN 331/Final Project/Final Project.srcs/sources_1/new/control_unit.v:43]
+INFO: [Synth 8-6155] done synthesizing module 'control_unit' (0#1) [C:/Users/rithv/Documents/CMPEN 331/Final Project/Final Project.srcs/sources_1/new/control_unit.v:23]
+WARNING: [Synth 8-689] width (1) of port connection 'pcsrc' does not match port width (2) of module 'control_unit' [C:/Users/rithv/Documents/CMPEN 331/Final Project/Final Project.srcs/sources_1/new/sc_cpu.v:73]
+WARNING: [Synth 8-689] width (2) of port connection 'aluc' does not match port width (4) of module 'control_unit' [C:/Users/rithv/Documents/CMPEN 331/Final Project/Final Project.srcs/sources_1/new/sc_cpu.v:73]
+WARNING: [Synth 8-689] width (4) of port connection 'wmem' does not match port width (1) of module 'control_unit' [C:/Users/rithv/Documents/CMPEN 331/Final Project/Final Project.srcs/sources_1/new/sc_cpu.v:73]
+INFO: [Synth 8-6157] synthesizing module 'mux_inst_mem' [C:/Users/rithv/Documents/CMPEN 331/Final Project/Final Project.srcs/sources_1/new/mux_inst_mem.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'mux_inst_mem' (0#1) [C:/Users/rithv/Documents/CMPEN 331/Final Project/Final Project.srcs/sources_1/new/mux_inst_mem.v:23]
+INFO: [Synth 8-6157] synthesizing module 'D_mux' [C:/Users/rithv/Documents/CMPEN 331/Final Project/Final Project.srcs/sources_1/new/D_mux.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'D_mux' (0#1) [C:/Users/rithv/Documents/CMPEN 331/Final Project/Final Project.srcs/sources_1/new/D_mux.v:23]
+INFO: [Synth 8-6157] synthesizing module 'f' [C:/Users/rithv/Documents/CMPEN 331/Final Project/Final Project.srcs/sources_1/new/f.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'f' (0#1) [C:/Users/rithv/Documents/CMPEN 331/Final Project/Final Project.srcs/sources_1/new/f.v:23]
+INFO: [Synth 8-6157] synthesizing module 'regfile' [C:/Users/rithv/Documents/CMPEN 331/Final Project/Final Project.srcs/sources_1/new/regfile.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'regfile' (0#1) [C:/Users/rithv/Documents/CMPEN 331/Final Project/Final Project.srcs/sources_1/new/regfile.v:23]
+WARNING: [Synth 8-689] width (32) of port connection 'clk' does not match port width (1) of module 'regfile' [C:/Users/rithv/Documents/CMPEN 331/Final Project/Final Project.srcs/sources_1/new/sc_cpu.v:77]
+WARNING: [Synth 8-689] width (5) of port connection 'wreg' does not match port width (1) of module 'regfile' [C:/Users/rithv/Documents/CMPEN 331/Final Project/Final Project.srcs/sources_1/new/sc_cpu.v:77]
+INFO: [Synth 8-6157] synthesizing module 'sign_extender' [C:/Users/rithv/Documents/CMPEN 331/Final Project/Final Project.srcs/sources_1/new/sign_extender.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'sign_extender' (0#1) [C:/Users/rithv/Documents/CMPEN 331/Final Project/Final Project.srcs/sources_1/new/sign_extender.v:23]
+INFO: [Synth 8-6157] synthesizing module 'shifter' [C:/Users/rithv/Documents/CMPEN 331/Final Project/Final Project.srcs/sources_1/new/shifter.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'shifter' (0#1) [C:/Users/rithv/Documents/CMPEN 331/Final Project/Final Project.srcs/sources_1/new/shifter.v:23]
+INFO: [Synth 8-6157] synthesizing module 'mux_shiftline' [C:/Users/rithv/Documents/CMPEN 331/Final Project/Final Project.srcs/sources_1/new/mux_shiftline.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'mux_shiftline' (0#1) [C:/Users/rithv/Documents/CMPEN 331/Final Project/Final Project.srcs/sources_1/new/mux_shiftline.v:23]
+INFO: [Synth 8-6157] synthesizing module 'mux' [C:/Users/rithv/Documents/CMPEN 331/Final Project/Final Project.srcs/sources_1/new/mux.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'mux' (0#1) [C:/Users/rithv/Documents/CMPEN 331/Final Project/Final Project.srcs/sources_1/new/mux.v:23]
+INFO: [Synth 8-6157] synthesizing module 'ALU' [C:/Users/rithv/Documents/CMPEN 331/Final Project/Final Project.srcs/sources_1/new/ALU.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'ALU' (0#1) [C:/Users/rithv/Documents/CMPEN 331/Final Project/Final Project.srcs/sources_1/new/ALU.v:23]
+INFO: [Synth 8-6157] synthesizing module 'sextandshift' [C:/Users/rithv/Documents/CMPEN 331/Final Project/Final Project.srcs/sources_1/new/sextandshift.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'sextandshift' (0#1) [C:/Users/rithv/Documents/CMPEN 331/Final Project/Final Project.srcs/sources_1/new/sextandshift.v:23]
+INFO: [Synth 8-6157] synthesizing module 'sext_adder' [C:/Users/rithv/Documents/CMPEN 331/Final Project/Final Project.srcs/sources_1/new/sext_adder.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'sext_adder' (0#1) [C:/Users/rithv/Documents/CMPEN 331/Final Project/Final Project.srcs/sources_1/new/sext_adder.v:23]
+INFO: [Synth 8-6157] synthesizing module 'PC_mux' [C:/Users/rithv/Documents/CMPEN 331/Final Project/Final Project.srcs/sources_1/new/PC_mux.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'PC_mux' (0#1) [C:/Users/rithv/Documents/CMPEN 331/Final Project/Final Project.srcs/sources_1/new/PC_mux.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'sc_cpu' (0#1) [C:/Users/rithv/Documents/CMPEN 331/Final Project/Final Project.srcs/sources_1/new/sc_cpu.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'single_cycle_computer' (0#1) [C:/Users/rithv/Documents/CMPEN 331/Final Project/Final Project.srcs/sources_1/new/single_cycle_computer.v:23]
+WARNING: [Synth 8-7129] Port addr[31] in module scdatamem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[30] in module scdatamem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[29] in module scdatamem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[28] in module scdatamem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[27] in module scdatamem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[26] in module scdatamem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[25] in module scdatamem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[24] in module scdatamem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[23] in module scdatamem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[22] in module scdatamem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[21] in module scdatamem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[20] in module scdatamem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[19] in module scdatamem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[18] in module scdatamem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[17] in module scdatamem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[16] in module scdatamem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[15] in module scdatamem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[14] in module scdatamem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[13] in module scdatamem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[12] in module scdatamem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[11] in module scdatamem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[10] in module scdatamem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[9] in module scdatamem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[8] in module scdatamem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[7] in module scdatamem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[1] in module scdatamem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[0] in module scdatamem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[31] in module sc_inst_mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[30] in module sc_inst_mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[29] in module sc_inst_mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[28] in module sc_inst_mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[27] in module sc_inst_mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[26] in module sc_inst_mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[25] in module sc_inst_mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[24] in module sc_inst_mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[23] in module sc_inst_mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[22] in module sc_inst_mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[21] in module sc_inst_mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[20] in module sc_inst_mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[19] in module sc_inst_mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[18] in module sc_inst_mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[17] in module sc_inst_mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[16] in module sc_inst_mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[15] in module sc_inst_mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[14] in module sc_inst_mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[13] in module sc_inst_mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[12] in module sc_inst_mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[11] in module sc_inst_mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[10] in module sc_inst_mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[9] in module sc_inst_mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[8] in module sc_inst_mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[7] in module sc_inst_mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[1] in module sc_inst_mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[0] in module sc_inst_mem is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:06 ; elapsed = 00:00:15 . Memory (MB): peak = 919.879 ; gain = 503.281
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:06 ; elapsed = 00:00:16 . Memory (MB): peak = 919.879 ; gain = 503.281
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7s100fgga676-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:06 ; elapsed = 00:00:16 . Memory (MB): peak = 919.879 ; gain = 503.281
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7s100fgga676-1
+WARNING: [Synth 8-327] inferring latch for variable 'pcsrc_reg' [C:/Users/rithv/Documents/CMPEN 331/Final Project/Final Project.srcs/sources_1/new/control_unit.v:48]
+WARNING: [Synth 8-327] inferring latch for variable 'aluc_reg' [C:/Users/rithv/Documents/CMPEN 331/Final Project/Final Project.srcs/sources_1/new/control_unit.v:45]
+WARNING: [Synth 8-327] inferring latch for variable 'm2reg_reg' [C:/Users/rithv/Documents/CMPEN 331/Final Project/Final Project.srcs/sources_1/new/control_unit.v:49]
+WARNING: [Synth 8-327] inferring latch for variable 'wmem_reg' [C:/Users/rithv/Documents/CMPEN 331/Final Project/Final Project.srcs/sources_1/new/control_unit.v:50]
+WARNING: [Synth 8-327] inferring latch for variable 'shift_reg' [C:/Users/rithv/Documents/CMPEN 331/Final Project/Final Project.srcs/sources_1/new/control_unit.v:46]
+WARNING: [Synth 8-327] inferring latch for variable 'aluimm_reg' [C:/Users/rithv/Documents/CMPEN 331/Final Project/Final Project.srcs/sources_1/new/control_unit.v:51]
+WARNING: [Synth 8-327] inferring latch for variable 'wreg_reg' [C:/Users/rithv/Documents/CMPEN 331/Final Project/Final Project.srcs/sources_1/new/control_unit.v:47]
+WARNING: [Synth 8-327] inferring latch for variable 'sext_reg' [C:/Users/rithv/Documents/CMPEN 331/Final Project/Final Project.srcs/sources_1/new/control_unit.v:53]
+WARNING: [Synth 8-327] inferring latch for variable 'jal_reg' [C:/Users/rithv/Documents/CMPEN 331/Final Project/Final Project.srcs/sources_1/new/control_unit.v:54]
+WARNING: [Synth 8-327] inferring latch for variable 'z_reg' [C:/Users/rithv/Documents/CMPEN 331/Final Project/Final Project.srcs/sources_1/new/ALU.v:33]
+WARNING: [Synth 8-327] inferring latch for variable 'r_reg' [C:/Users/rithv/Documents/CMPEN 331/Final Project/Final Project.srcs/sources_1/new/ALU.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'pcmux_q_reg' [C:/Users/rithv/Documents/CMPEN 331/Final Project/Final Project.srcs/sources_1/new/PC_mux.v:34]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:17 . Memory (MB): peak = 919.879 ; gain = 503.281
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 2     
+	   3 Input   32 Bit       Adders := 1     
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 5     
+	  10 Input   32 Bit        Muxes := 1     
+	   4 Input   32 Bit        Muxes := 1     
+	   2 Input    5 Bit        Muxes := 2     
+	  10 Input    4 Bit        Muxes := 1     
+	  13 Input    4 Bit        Muxes := 1     
+	  13 Input    2 Bit        Muxes := 1     
+	  10 Input    1 Bit        Muxes := 3     
+	  13 Input    1 Bit        Muxes := 9     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 160 (col length:80)
+BRAMs: 240 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-3332] Sequential element (sc_cpu1/controlunit1/pcsrc_reg[1]) is unused and will be removed from module single_cycle_computer.
+WARNING: [Synth 8-3332] Sequential element (sc_cpu1/controlunit1/aluc_reg[3]) is unused and will be removed from module single_cycle_computer.
+WARNING: [Synth 8-3332] Sequential element (sc_cpu1/controlunit1/aluc_reg[2]) is unused and will be removed from module single_cycle_computer.
+WARNING: [Synth 8-3332] Sequential element (sc_cpu1/alu1/r_reg[31]) is unused and will be removed from module single_cycle_computer.
+WARNING: [Synth 8-3332] Sequential element (sc_cpu1/alu1/r_reg[30]) is unused and will be removed from module single_cycle_computer.
+WARNING: [Synth 8-3332] Sequential element (sc_cpu1/alu1/r_reg[29]) is unused and will be removed from module single_cycle_computer.
+WARNING: [Synth 8-3332] Sequential element (sc_cpu1/alu1/r_reg[28]) is unused and will be removed from module single_cycle_computer.
+WARNING: [Synth 8-3332] Sequential element (sc_cpu1/alu1/r_reg[27]) is unused and will be removed from module single_cycle_computer.
+WARNING: [Synth 8-3332] Sequential element (sc_cpu1/alu1/r_reg[26]) is unused and will be removed from module single_cycle_computer.
+WARNING: [Synth 8-3332] Sequential element (sc_cpu1/alu1/r_reg[25]) is unused and will be removed from module single_cycle_computer.
+WARNING: [Synth 8-3332] Sequential element (sc_cpu1/alu1/r_reg[24]) is unused and will be removed from module single_cycle_computer.
+WARNING: [Synth 8-3332] Sequential element (sc_cpu1/alu1/r_reg[23]) is unused and will be removed from module single_cycle_computer.
+WARNING: [Synth 8-3332] Sequential element (sc_cpu1/alu1/r_reg[22]) is unused and will be removed from module single_cycle_computer.
+WARNING: [Synth 8-3332] Sequential element (sc_cpu1/alu1/r_reg[21]) is unused and will be removed from module single_cycle_computer.
+WARNING: [Synth 8-3332] Sequential element (sc_cpu1/alu1/r_reg[20]) is unused and will be removed from module single_cycle_computer.
+WARNING: [Synth 8-3332] Sequential element (sc_cpu1/alu1/r_reg[19]) is unused and will be removed from module single_cycle_computer.
+WARNING: [Synth 8-3332] Sequential element (sc_cpu1/alu1/r_reg[18]) is unused and will be removed from module single_cycle_computer.
+WARNING: [Synth 8-3332] Sequential element (sc_cpu1/alu1/r_reg[17]) is unused and will be removed from module single_cycle_computer.
+WARNING: [Synth 8-3332] Sequential element (sc_cpu1/alu1/r_reg[16]) is unused and will be removed from module single_cycle_computer.
+WARNING: [Synth 8-3332] Sequential element (sc_cpu1/alu1/r_reg[15]) is unused and will be removed from module single_cycle_computer.
+WARNING: [Synth 8-3332] Sequential element (sc_cpu1/alu1/r_reg[14]) is unused and will be removed from module single_cycle_computer.
+WARNING: [Synth 8-3332] Sequential element (sc_cpu1/alu1/r_reg[13]) is unused and will be removed from module single_cycle_computer.
+WARNING: [Synth 8-3332] Sequential element (sc_cpu1/alu1/r_reg[12]) is unused and will be removed from module single_cycle_computer.
+WARNING: [Synth 8-3332] Sequential element (sc_cpu1/alu1/r_reg[11]) is unused and will be removed from module single_cycle_computer.
+WARNING: [Synth 8-3332] Sequential element (sc_cpu1/alu1/r_reg[10]) is unused and will be removed from module single_cycle_computer.
+WARNING: [Synth 8-3332] Sequential element (sc_cpu1/alu1/r_reg[9]) is unused and will be removed from module single_cycle_computer.
+WARNING: [Synth 8-3332] Sequential element (sc_cpu1/alu1/r_reg[8]) is unused and will be removed from module single_cycle_computer.
+WARNING: [Synth 8-3332] Sequential element (sc_cpu1/alu1/r_reg[7]) is unused and will be removed from module single_cycle_computer.
+WARNING: [Synth 8-3332] Sequential element (sc_cpu1/alu1/r_reg[6]) is unused and will be removed from module single_cycle_computer.
+WARNING: [Synth 8-3332] Sequential element (sc_cpu1/alu1/r_reg[5]) is unused and will be removed from module single_cycle_computer.
+WARNING: [Synth 8-3332] Sequential element (sc_cpu1/alu1/r_reg[4]) is unused and will be removed from module single_cycle_computer.
+WARNING: [Synth 8-3332] Sequential element (sc_cpu1/alu1/r_reg[3]) is unused and will be removed from module single_cycle_computer.
+WARNING: [Synth 8-3332] Sequential element (sc_cpu1/alu1/r_reg[2]) is unused and will be removed from module single_cycle_computer.
+WARNING: [Synth 8-3332] Sequential element (sc_cpu1/alu1/r_reg[1]) is unused and will be removed from module single_cycle_computer.
+WARNING: [Synth 8-3332] Sequential element (sc_cpu1/alu1/r_reg[0]) is unused and will be removed from module single_cycle_computer.
+WARNING: [Synth 8-3332] Sequential element (sc_cpu1/pc_mux1/pcmux_q_reg[31]) is unused and will be removed from module single_cycle_computer.
+WARNING: [Synth 8-3332] Sequential element (sc_cpu1/pc_mux1/pcmux_q_reg[30]) is unused and will be removed from module single_cycle_computer.
+WARNING: [Synth 8-3332] Sequential element (sc_cpu1/pc_mux1/pcmux_q_reg[29]) is unused and will be removed from module single_cycle_computer.
+WARNING: [Synth 8-3332] Sequential element (sc_cpu1/pc_mux1/pcmux_q_reg[28]) is unused and will be removed from module single_cycle_computer.
+WARNING: [Synth 8-3332] Sequential element (sc_cpu1/pc_mux1/pcmux_q_reg[27]) is unused and will be removed from module single_cycle_computer.
+WARNING: [Synth 8-3332] Sequential element (sc_cpu1/pc_mux1/pcmux_q_reg[26]) is unused and will be removed from module single_cycle_computer.
+WARNING: [Synth 8-3332] Sequential element (sc_cpu1/pc_mux1/pcmux_q_reg[25]) is unused and will be removed from module single_cycle_computer.
+WARNING: [Synth 8-3332] Sequential element (sc_cpu1/pc_mux1/pcmux_q_reg[24]) is unused and will be removed from module single_cycle_computer.
+WARNING: [Synth 8-3332] Sequential element (sc_cpu1/pc_mux1/pcmux_q_reg[23]) is unused and will be removed from module single_cycle_computer.
+WARNING: [Synth 8-3332] Sequential element (sc_cpu1/pc_mux1/pcmux_q_reg[22]) is unused and will be removed from module single_cycle_computer.
+WARNING: [Synth 8-3332] Sequential element (sc_cpu1/pc_mux1/pcmux_q_reg[21]) is unused and will be removed from module single_cycle_computer.
+WARNING: [Synth 8-3332] Sequential element (sc_cpu1/pc_mux1/pcmux_q_reg[20]) is unused and will be removed from module single_cycle_computer.
+WARNING: [Synth 8-3332] Sequential element (sc_cpu1/pc_mux1/pcmux_q_reg[19]) is unused and will be removed from module single_cycle_computer.
+WARNING: [Synth 8-3332] Sequential element (sc_cpu1/pc_mux1/pcmux_q_reg[18]) is unused and will be removed from module single_cycle_computer.
+WARNING: [Synth 8-3332] Sequential element (sc_cpu1/pc_mux1/pcmux_q_reg[17]) is unused and will be removed from module single_cycle_computer.
+WARNING: [Synth 8-3332] Sequential element (sc_cpu1/pc_mux1/pcmux_q_reg[16]) is unused and will be removed from module single_cycle_computer.
+WARNING: [Synth 8-3332] Sequential element (sc_cpu1/pc_mux1/pcmux_q_reg[15]) is unused and will be removed from module single_cycle_computer.
+WARNING: [Synth 8-3332] Sequential element (sc_cpu1/pc_mux1/pcmux_q_reg[14]) is unused and will be removed from module single_cycle_computer.
+WARNING: [Synth 8-3332] Sequential element (sc_cpu1/pc_mux1/pcmux_q_reg[13]) is unused and will be removed from module single_cycle_computer.
+WARNING: [Synth 8-3332] Sequential element (sc_cpu1/pc_mux1/pcmux_q_reg[12]) is unused and will be removed from module single_cycle_computer.
+WARNING: [Synth 8-3332] Sequential element (sc_cpu1/pc_mux1/pcmux_q_reg[11]) is unused and will be removed from module single_cycle_computer.
+WARNING: [Synth 8-3332] Sequential element (sc_cpu1/pc_mux1/pcmux_q_reg[10]) is unused and will be removed from module single_cycle_computer.
+WARNING: [Synth 8-3332] Sequential element (sc_cpu1/pc_mux1/pcmux_q_reg[9]) is unused and will be removed from module single_cycle_computer.
+WARNING: [Synth 8-3332] Sequential element (sc_cpu1/pc_mux1/pcmux_q_reg[8]) is unused and will be removed from module single_cycle_computer.
+WARNING: [Synth 8-3332] Sequential element (sc_cpu1/pc_mux1/pcmux_q_reg[7]) is unused and will be removed from module single_cycle_computer.
+WARNING: [Synth 8-3332] Sequential element (sc_cpu1/pc_mux1/pcmux_q_reg[6]) is unused and will be removed from module single_cycle_computer.
+WARNING: [Synth 8-3332] Sequential element (sc_cpu1/pc_mux1/pcmux_q_reg[5]) is unused and will be removed from module single_cycle_computer.
+WARNING: [Synth 8-3332] Sequential element (sc_cpu1/pc_mux1/pcmux_q_reg[4]) is unused and will be removed from module single_cycle_computer.
+WARNING: [Synth 8-3332] Sequential element (sc_cpu1/pc_mux1/pcmux_q_reg[3]) is unused and will be removed from module single_cycle_computer.
+WARNING: [Synth 8-3332] Sequential element (sc_cpu1/pc_mux1/pcmux_q_reg[2]) is unused and will be removed from module single_cycle_computer.
+WARNING: [Synth 8-3332] Sequential element (sc_cpu1/pc_mux1/pcmux_q_reg[1]) is unused and will be removed from module single_cycle_computer.
+WARNING: [Synth 8-3332] Sequential element (sc_cpu1/pc_mux1/pcmux_q_reg[0]) is unused and will be removed from module single_cycle_computer.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:25 . Memory (MB): peak = 1110.434 ; gain = 693.836
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+ROM: Preliminary Mapping Report
++----------------------+------------+---------------+----------------+
+|Module Name           | RTL Object | Depth x Width | Implemented As | 
++----------------------+------------+---------------+----------------+
+|sc_inst_mem           | inst_mem   | 32x30         | LUT            | 
+|single_cycle_computer | p_0_out    | 32x30         | LUT            | 
++----------------------+------------+---------------+----------------+
+
+
+Distributed RAM: Preliminary Mapping Report (see note below)
++----------------------+-------------------------------+-----------+----------------------+----------------+
+|Module Name           | RTL Object                    | Inference | Size (Depth x Width) | Primitives     | 
++----------------------+-------------------------------+-----------+----------------------+----------------+
+|single_cycle_computer | sc_cpu1/regfile1/register_reg | Implied   | 2 x 5                | RAM32M x 12    | 
+|single_cycle_computer | sc_data1/ram_reg              | Implied   | 32 x 32              | RAM32X1S x 32  | 
++----------------------+-------------------------------+-----------+----------------------+----------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:25 . Memory (MB): peak = 1110.434 ; gain = 693.836
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Final Mapping Report
++----------------------+-------------------------------+-----------+----------------------+----------------+
+|Module Name           | RTL Object                    | Inference | Size (Depth x Width) | Primitives     | 
++----------------------+-------------------------------+-----------+----------------------+----------------+
+|single_cycle_computer | sc_cpu1/regfile1/register_reg | Implied   | 2 x 5                | RAM32M x 12    | 
+|single_cycle_computer | sc_data1/ram_reg              | Implied   | 32 x 32              | RAM32X1S x 32  | 
++----------------------+-------------------------------+-----------+----------------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3332] Sequential element (sc_cpu1/controlunit1/pcsrc_reg[0]) is unused and will be removed from module single_cycle_computer.
+WARNING: [Synth 8-3332] Sequential element (sc_cpu1/controlunit1/aluc_reg[1]) is unused and will be removed from module single_cycle_computer.
+WARNING: [Synth 8-3332] Sequential element (sc_cpu1/controlunit1/aluc_reg[0]) is unused and will be removed from module single_cycle_computer.
+WARNING: [Synth 8-3332] Sequential element (sc_cpu1/controlunit1/m2reg_reg) is unused and will be removed from module single_cycle_computer.
+WARNING: [Synth 8-3332] Sequential element (sc_cpu1/controlunit1/wmem_reg) is unused and will be removed from module single_cycle_computer.
+WARNING: [Synth 8-3332] Sequential element (sc_cpu1/controlunit1/shift_reg) is unused and will be removed from module single_cycle_computer.
+WARNING: [Synth 8-3332] Sequential element (sc_cpu1/controlunit1/aluimm_reg) is unused and will be removed from module single_cycle_computer.
+WARNING: [Synth 8-3332] Sequential element (sc_cpu1/controlunit1/wreg_reg) is unused and will be removed from module single_cycle_computer.
+WARNING: [Synth 8-3332] Sequential element (sc_cpu1/controlunit1/sext_reg) is unused and will be removed from module single_cycle_computer.
+WARNING: [Synth 8-3332] Sequential element (sc_cpu1/controlunit1/jal_reg) is unused and will be removed from module single_cycle_computer.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:10 ; elapsed = 00:00:25 . Memory (MB): peak = 1110.434 ; gain = 693.836
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:12 ; elapsed = 00:00:31 . Memory (MB): peak = 1110.434 ; gain = 693.836
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:12 ; elapsed = 00:00:31 . Memory (MB): peak = 1110.434 ; gain = 693.836
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:12 ; elapsed = 00:00:31 . Memory (MB): peak = 1110.434 ; gain = 693.836
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:12 ; elapsed = 00:00:31 . Memory (MB): peak = 1110.434 ; gain = 693.836
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:12 ; elapsed = 00:00:31 . Memory (MB): peak = 1110.434 ; gain = 693.836
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:12 ; elapsed = 00:00:31 . Memory (MB): peak = 1110.434 ; gain = 693.836
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |BUFG     |     1|
+|2     |CARRY4   |    30|
+|3     |LUT1     |     1|
+|4     |LUT2     |    42|
+|5     |LUT3     |    47|
+|6     |LUT4     |    12|
+|7     |LUT5     |    62|
+|8     |LUT6     |    67|
+|9     |RAM32M   |     2|
+|10    |RAM32X1S |    10|
+|11    |FDCE     |    32|
+|12    |LDC      |     1|
+|13    |IBUF     |     2|
+|14    |OBUF     |   128|
++------+---------+------+
+
+Report Instance Areas: 
++------+--------------+-----------+------+
+|      |Instance      |Module     |Cells |
++------+--------------+-----------+------+
+|1     |top           |           |   437|
+|2     |  sc_cpu1     |sc_cpu     |   296|
+|3     |    alu1      |ALU        |     6|
+|4     |    pc1       |PC         |   261|
+|5     |    pcadd     |PC_Adder   |    19|
+|6     |    regfile1  |regfile    |     2|
+|7     |    sext_add1 |sext_adder |     8|
+|8     |  sc_data1    |scdatamem  |    10|
++------+--------------+-----------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:12 ; elapsed = 00:00:31 . Memory (MB): peak = 1110.434 ; gain = 693.836
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 149 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:12 ; elapsed = 00:00:31 . Memory (MB): peak = 1110.434 ; gain = 693.836
+Synthesis Optimization Complete : Time (s): cpu = 00:00:12 ; elapsed = 00:00:31 . Memory (MB): peak = 1110.434 ; gain = 693.836
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 1120.637 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 43 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1219.777 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 13 instances were transformed.
+  LDC => LDCE: 1 instance 
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 2 instances
+  RAM32X1S => RAM32X1S (RAMS32): 10 instances
+
+Synth Design complete, checksum: 7741a832
+INFO: [Common 17-83] Releasing license: Synthesis
+56 Infos, 149 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:34 . Memory (MB): peak = 1219.777 ; gain = 810.430
+INFO: [Common 17-1381] The checkpoint 'C:/Users/rithv/Documents/CMPEN 331/Final Project/Final Project.runs/synth_1/single_cycle_computer.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file single_cycle_computer_utilization_synth.rpt -pb single_cycle_computer_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu May  4 15:02:18 2023...
